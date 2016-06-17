@@ -7,6 +7,10 @@ _Ember frontend for HospitalRun_
 
 To run the development environment for this frontend you will need to have [Git](https://git-scm.com/), [Node.js](https://nodejs.org), [Ember CLI](http://ember-cli.com/), [Bower](http://bower.io/) and [CouchDB](http://couchdb.apache.org/) installed.
 
+## Contributing
+
+Contributions are welcome via pull requests and issues.  Please see our [contributing guide](https://github.com/hospitalrun/hospitalrun-frontend/blob/master/.github/CONTRIBUTING.md) for more details, including a link to join our project Slack.
+
 ## Install
 To install the frontend please do the following:
 
@@ -16,20 +20,33 @@ To install the frontend please do the following:
 3. Install [ember-cli latest](https://www.npmjs.org/package/ember-cli): `npm install -g ember-cli@latest`.
    Depending on your [npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) you might need root access to install ember-cli.
 4. Install [bower](https://www.npmjs.org/package/bower): `npm install -g bower`
-5. Make sure you have Ruby installed (for the scss linter).
-6. Clone this repo with `git clone https://github.com/HospitalRun/hospitalrun-frontend`, go to the cloned folder and run `script/bootstrap`. (*Note: Depending on your [npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) you might need root access to install PhantomJS2; also, Windows users must run with [Cygwin](http://cygwin.org/)*, and will need to install Ruby)
-7. Install and configure [CouchDB](http://couchdb.apache.org/)
+5. Clone this repo with `git clone https://github.com/HospitalRun/hospitalrun-frontend`, go to the cloned folder and run `script/bootstrap`. (*Note: Depending on your [npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) you might need root access to install PhantomJS2; also, Windows users must run with [Cygwin](http://cygwin.org/)*.
+6. Install and configure [CouchDB](http://couchdb.apache.org/)
     1. Download and install CouchDB from http://couchdb.apache.org/#download
     2. Create admin user:
         1. If you have just installed CouchDB and have no admin user, please run `./script/initcouch.sh` in the folder you cloned the HospitalRun repo.  A user `hradmin` will be created with password: `test`.
         2. If you already have a CouchDB admin user, please run `./script/initcouch.sh USER PASS` in the folder you cloned the HospitalRun repo.  `USER` and `PASS` are the CouchDB admin user credentials.
-8. Copy the `server/config-example.js` to `server/config.js` in the folder you cloned the HospitalRun repo.
+7. Copy the `server/config-example.js` to `server/config.js` in the folder you cloned the HospitalRun repo.  If you already had a CouchDB admin user that you passed into the couch script (`./script/initcouch.sh USER PASS`), then you will need to modify the `couchAdminUser` and `couchAdminPassword` values in `server/config.js` to reflect those credentials.
 
 ### Experimental
-If you are willing to try using `make`, ensure you have installed git, node and couchdb (steps 1, 2 and 6 above), you may skip the rest.  This requires couchdb in the path to work correctly.
+
+#### Make
+If you are willing to try using `make`, ensure you have installed git, node and couchdb (steps 1, 2 and 7 above), you may skip the rest.  This requires couchdb in the path to work correctly.
 * Run `make serve`, it will start couchdb, install npm dependencies and start the server.
 * Run `make all` to run all tests and build the app.
 * Look into `Makefile` to figure other targets available.
+
+#### Cloud 9 Development Environment
+[Documented in the project wiki](https://github.com/HospitalRun/hospitalrun-frontend/wiki/Optional:-Cloud9-Development-Environment)
+
+#### Nitrous Quickstart
+Create a free development environment for this HospitalRun project in the cloud on [Nitrous.io](https://www.nitrous.io) by clicking the button below.
+
+<a href="https://www.nitrous.io/quickstart">
+  <img src="https://nitrous-image-icons.s3.amazonaws.com/quickstart.png" alt="Nitrous Quickstart" width=142 height=34>
+</a>
+
+In the IDE, start HospitalRun via `Run > Start HospitalRun` and access your site via `Preview > 4200`.
 
 ## Start
 To start the frontend please do the following:
@@ -90,7 +107,7 @@ The easiest way to work with styles in the project and abide by our linting rule
 
 ## Contributing
 
-Contributions are welcome via pull requests and issues.  Please see our [contributing guide](https://github.com/hospitalrun/hospitalrun-frontend/blob/master/.github/CONTRIBUTING.md) for more details.
+Again, contributions are welcome via pull requests and issues.  Please see our [contributing guide](https://github.com/hospitalrun/hospitalrun-frontend/blob/master/.github/CONTRIBUTING.md) for more details.
 
 **Seriously, please read the [Contribution Guide](https://github.com/hospitalrun/hospitalrun-frontend/blob/master/.github/CONTRIBUTING.md).**
 

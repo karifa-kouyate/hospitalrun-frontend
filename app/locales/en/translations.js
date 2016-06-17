@@ -35,6 +35,8 @@ export default {
       load_db: 'Load DB',
       users: 'Users',
       new_user: 'New User',
+      admitted_patients: 'Admitted Patients',
+      missed: 'Missed',
       user_roles: 'User Roles'
     },
     actions: {
@@ -211,6 +213,7 @@ export default {
     loading: 'Loading',
     name: 'Name',
     patient: 'Patient',
+    prescriber: 'Prescriber',
     quantity: 'Quantity',
     requested_on: 'Requested On',
     date: 'Date',
@@ -580,6 +583,7 @@ export default {
     new_title: 'New Appointment',
     section_title: 'Appointments',
     this_week: 'Appointments This Week',
+    missed: 'Missed Appointments',
     search_title: 'Search Appointments',
     today_title: 'Today\'s Appointments',
     messages: {

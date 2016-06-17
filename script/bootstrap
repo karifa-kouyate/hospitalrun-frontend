@@ -14,12 +14,7 @@ if [ -f "package.json" ]; then
   npm install -g phantomjs-prebuilt
 fi
 
-if [ -f "bower.json"]; then
+if [ -f "bower.json" ]; then
   echo "==> Installing bower components…"
   bower install
-fi
-
-if [ -f "Gemfile" ]; then
-  echo "==> Installing gem dependencies…"
-  bundle install
 fi
